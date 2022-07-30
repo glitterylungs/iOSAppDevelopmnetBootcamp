@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KbQ-ba-1rR">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlowerRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="Hyc-md-OeT">
+                                <rect key="frame" x="0.0" y="102" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hyc-md-OeT" secondAttribute="height" multiplier="1:1" id="ade-at-buO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check your flower!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="sXW-in-a1J">
+                                <rect key="frame" x="16" y="497" width="343" height="281"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.26450100732916665" green="0.36347853535353536" blue="0.307585484786979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hyc-md-OeT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5KC-jJ-auL"/>
+                            <constraint firstItem="sXW-in-a1J" firstAttribute="top" secondItem="Hyc-md-OeT" secondAttribute="bottom" constant="20" id="CIN-j9-AE7"/>
+                            <constraint firstItem="Hyc-md-OeT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HDj-DV-IUh"/>
+                            <constraint firstItem="sXW-in-a1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qaT-zn-nhw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sXW-in-a1J" secondAttribute="trailing" constant="16" id="uCH-Y2-AUe"/>
+                            <constraint firstItem="Hyc-md-OeT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="wWQ-0v-653"/>
+                            <constraint firstItem="sXW-in-a1J" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="we3-an-UTh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="I9N-Fb-dTn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="bX1-uu-FVK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" id="Kt1-ZR-Dg8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="Hyc-md-OeT" id="TT5-7s-f9z"/>
+                        <outlet property="label" destination="sXW-in-a1J" id="X9k-3Y-4gg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="109.35960591133005"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Un7-ko-dNx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KbQ-ba-1rR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4xV-MU-q8q">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.26260229950000002" green="0.36427354810000001" blue="0.30712553860000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Kdn-xH-5SG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5O0-p5-XG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-438" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flower" width="250" height="250"/>
+    </resources>
+</document>
